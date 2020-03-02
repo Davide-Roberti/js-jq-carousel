@@ -4,7 +4,14 @@ $(document).ready(function() {
     $('.next').click(nextSlide);        // Al click richiamo la funzione per aggiornare l'immagine visualizzando la successiva
     $('.prev').click(prevSlide);
 
-    setInterval(nextSlide, 3000);
+    var autoSlide = setInterval(nextSlide, 3000);
+
+    $('.images').mouseenter(function() {
+        clearInterval(autoSlide);
+    });
+    $('.images').mouseleave(function() {
+        autoSlide = setInterval(nextSlide, 3000);
+    });
 
     // Definisco le funzioni nextImage e prevImage
     function nextSlide() {
