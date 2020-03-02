@@ -13,6 +13,10 @@ $(document).ready(function() {
         autoSlide = setInterval(nextSlide, 3000);
     });
 
+    setTimeout(function() {
+        clearInterval(autoSlide);
+    }, 10000);
+
     // Definisco le funzioni nextImage e prevImage
     function nextSlide() {
         if ( $('.images img.active').hasClass('last') ) {
