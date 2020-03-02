@@ -15,9 +15,9 @@ $(document).ready(function() {
 
     setTimeout(function() {
         clearInterval(autoSlide);
-    }, 10000);
+    }, 60000);
 
-    // Definisco le funzioni nextImage e prevImage
+
     function nextSlide() {
         if ( $('.images img.active').hasClass('last') ) {
 
